@@ -16,6 +16,7 @@ class DefaultController extends \yii\base\Controller
         Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
         $headers = Yii::$app->response->headers;
         $headers->add('Content-Type', 'application/xml');
+        ob_clean();
         return $sitemapData;
     }
 }
